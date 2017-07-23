@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/js/app.jsx",
   "scripts": {
-    "clean": "rm -rf dest/ && rm -rf package-lock.json && rm -r node_modules && npm i",
+    "clean": "rm -rf dest/ && rm -rf package-lock.json && rm -rf node_modules && npm i",
     "build": "NODE_ENV=production webpack",
     "start": "webpack-dev-server -d"
   },
