@@ -1,0 +1,50 @@
+.rock-paper-scissors {
+  padding: $padding-large-vertical 0;
+  text-align: center;
+
+  .moves {
+    margin: $padding-large-vertical 0;
+
+    .move {
+      border: 3px dashed darken($brand-primary, 50%);
+      cursor: pointer;
+      font-size: $font-size-h4;
+      padding: $padding-large-vertical 0;
+      text-transform: capitalize;
+
+      &:hover,
+      &.selected {
+        background: darken($brand-primary, 35%);
+      }
+    }
+  }
+
+  .game-status {
+    color: $brand-info;
+    font-size: $font-size-h4;
+    margin: $padding-base-vertical 0;
+
+    .comp-move {
+      color: darken($brand-info, 30%);
+    }
+
+    .player-won {
+      color: $brand-success;
+    }
+
+    .comp-won {
+      color: $brand-danger;
+    }
+
+    .next-game-instructions {
+      color: darken($brand-info, 30%);
+      display: block;
+      font-size: $font-size-h6;
+      margin-top: $padding-xs-vertical;
+    }
+  }
+
+  .game-counter {
+    margin: $padding-base-vertical 0;
+  }
+}

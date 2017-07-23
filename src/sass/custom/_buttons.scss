@@ -1,0 +1,8 @@
+.btn {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}
+
+.btn-primary {
+  @include button-variant($text-color, $btn-primary-bg, darken($btn-primary-bg, 50%));
+  margin-top: $padding-xs-vertical;
+}

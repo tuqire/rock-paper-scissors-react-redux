@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-jsx",
+    "eslint-config-airbnb-base/rules/es6"
+  ],
+  "plugins": [
+    "babel",
+    "markdown"
+  ]
+}
