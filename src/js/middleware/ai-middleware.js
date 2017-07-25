@@ -32,6 +32,7 @@ export default function (store) {
         const { player: playerMove, comp: compMove } = store.getState().moves;
 
         console.log(playerMove, compMove);
+
         if (
           playerMove === ROCK && compMove === SCISSORS ||
           playerMove === SCISSORS && compMove === PAPER ||
