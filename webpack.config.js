@@ -20,6 +20,12 @@ if (process.env.NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor'
   }));
+
+  plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('production')
+    }
+  }));
 }
 
 module.exports = env => ({
