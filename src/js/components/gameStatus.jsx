@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 
 import { resetGame } from '../actions/game';
 import { PENDING, PLAYER, DRAW, COMP } from '../constants/game';
-import { getMoveDisplayName } from '../utils/moves';
+import { getMoveDisplayName } from '../utils';
 
-class GameStatus extends React.Component {
+export class GameStatus extends React.Component {
   render() {
     return (
       <div>
         {this.getGameStatusText()}
-        <h5 className='game-counter'>Win counter: {this.props.winCounter}<br />
-        Loss counter: {this.props.lossCounter}</h5>
-        {this.props.gameStatus !== PENDING ? <button className='btn btn-primary' onClick={this.props.resetGame}>Reset Game</button> : null}
+        <h5 className='game-counter'>
+          <span className='win-counter'>Win counter: {this.props.winCounter}</span>
+          <span className='loss-counter'>Loss counter: {this.props.lossCounter}</span>
+        </h5>
+        {this.props.gameStatus !== PENDING ? <button className='btn btn-primary reset-game-btn' onClick={this.props.resetGame}>Reset Game</button> : null}
       </div>
     );
   }

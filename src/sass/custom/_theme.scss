@@ -46,5 +46,10 @@
 
   .game-counter {
     margin: $padding-base-vertical 0;
+
+    .win-counter,
+    .loss-counter {
+      display: block;
+    }
   }
 }

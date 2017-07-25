@@ -2,7 +2,7 @@ import { PLAYER_WON, DRAWN_GAME, COMP_WON, RESET_GAME } from '../actions/game';
 import { PLAYER_MOVED } from '../actions/moves';
 import { PENDING, PLAYER, DRAW, COMP } from '../constants/game';
 
-export default function game (state = {
+export default function game(state = {
   status: PENDING,
   winCounter: 0,
   lossCounter: 0,

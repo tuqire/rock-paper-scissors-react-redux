@@ -7,11 +7,16 @@ import { playerMoved } from '../actions/moves';
 
 const MOVES = [ROCK, PAPER, SCISSORS];
 
-class Moves extends React.Component {
+export class Moves extends React.Component {
   render () {
     const moveEls = MOVES.map((move, i) => {
       return (
-        <Move key={i} className={this.props.playerMove === move ? 'selected' : ''} disabled={this.props.disabled} onClick={this.props.playerMoved} move={move} />
+        <Move key={i}
+          className={this.props.playerMove === move ? 'selected' : ''}
+          disabled={this.props.disabled}
+          onClick={this.props.playerMoved}
+          move={move}
+        />
       )
     });
 
